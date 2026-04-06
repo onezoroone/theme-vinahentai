@@ -51,6 +51,9 @@ Route::middleware('web')->group(function () {
     });
 
     Route::get('waifu/summon', [ThemeVinahentaiController::class, 'showWaifuSummon'])->name('waifu.summon');
+    Route::get('danh-sach', [ThemeVinahentaiController::class, 'showDanhSach'])->name('danh-sach');
+    Route::get('gioi-thieu', [ThemeVinahentaiController::class, 'showGioiThieu'])->name('gioi-thieu');
+    Route::get('genres', [ThemeVinahentaiController::class, 'showGenres'])->name('genres');
 
     Route::middleware('auth')->group(function () {
         Route::post('waifu/summon/perform', [WaifuSummonController::class, 'perform'])

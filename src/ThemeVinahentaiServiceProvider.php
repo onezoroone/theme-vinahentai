@@ -126,7 +126,7 @@ class ThemeVinahentaiServiceProvider extends ServiceProvider
         <div class="grid grid-cols-1 gap-8 md:grid-cols-[220px_1fr_1fr] md:gap-10">
             <div class="flex flex-col gap-5">
                 <img src="'.asset('vendor/theme-vinahentai/images/logo.webp').'" alt="Vinahentai Logo" class="h-8 w-36 md:h-10 md:w-44">
-                <nav class="flex flex-col gap-1.5"><a href="/gioi-thieu" class="text-txt-secondary hover:text-txt-primary text-sm font-medium transition-colors">Giới thiệu</a><a href="/danh-sach" class="text-txt-secondary hover:text-txt-primary text-sm font-medium transition-colors">Danh sách truyện</a><a href="/genres" class="text-txt-secondary hover:text-txt-primary text-sm font-medium transition-colors">Thể loại</a><a href="/leaderboard" class="text-txt-secondary hover:text-txt-primary text-sm font-medium transition-colors">Bảng xếp hạng</a><a href="/cam-nang" class="text-txt-secondary hover:text-txt-primary text-sm font-medium transition-colors">Cẩm nang</a></nav>
+                <nav class="flex flex-col gap-1.5"><a href="/gioi-thieu" class="text-txt-secondary hover:text-txt-primary text-sm font-medium transition-colors">Giới thiệu</a><a href="/danh-sach" class="text-txt-secondary hover:text-txt-primary text-sm font-medium transition-colors">Danh sách truyện</a><a href="/genres" class="text-txt-secondary hover:text-txt-primary text-sm font-medium transition-colors">Thể loại</a><a href="/leaderboard/manga" class="text-txt-secondary hover:text-txt-primary text-sm font-medium transition-colors">Bảng xếp hạng</a></nav>
                 <div class="flex flex-col gap-2">
                     <p class="text-txt-primary text-sm font-semibold">Liên hệ</p>
                     <a href="mailto:vinahentai.contact@gmail.com" class="text-txt-secondary hover:text-pink-400 flex items-center gap-1.5 text-sm font-medium transition-colors">
@@ -134,7 +134,7 @@ class ThemeVinahentaiServiceProvider extends ServiceProvider
                             <path d="M3 4a2 2 0 0 0-2 2v1.161l8.441 4.221a1.25 1.25 0 0 0 1.118 0L19 7.162V6a2 2 0 0 0-2-2H3Z"></path>
                             <path d="m19 8.839-7.77 3.885a2.75 2.75 0 0 1-2.46 0L1 8.839V14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.839Z"></path>
                         </svg>
-                        vinahentai.contact@gmail.com
+                        test@test.com
                     </a>
                 </div>
                 <p class="text-txt-muted text-xs">© 2025 Vinahentai</p>

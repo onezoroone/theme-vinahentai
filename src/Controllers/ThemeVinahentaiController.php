@@ -1026,4 +1026,99 @@ class ThemeVinahentaiController extends Controller
 
         return (int) WaifuSummonLog::query()->where('user_id', Auth::id())->count();
     }
+
+    public function showDanhSach(Request $request)
+    {
+        SEOMeta::setTitle('Danh sách truyện | ' . env('APP_NAME'), false)
+            ->setDescription(active_theme_config('seo_home_description', ''))
+            ->setCanonical(route('danh-sach'));
+
+        $genres = Genre::query()
+            ->orderBy('name')
+            ->get();
+
+        $sort = (string) $request->query('sort', 'new');
+        $allowedSorts = ['new', 'old', 'views', 'rating', 'completed'];
+        if (! in_array($sort, $allowedSorts, true)) {
+            $sort = 'new';
+        }
+
+        $status = (string) $request->query('status', '');
+        $allowedStatuses = ['ongoing', 'completed'];
+        if (! in_array($status, $allowedStatuses, true)) {
+            $status = '';
+        }
+
+        $query = Manga::query()
+            ->published()
+            ->with('genres');
+
+        match ($sort) {
+            'old' => $query->oldest('updated_at'),
+            'views' => $query->orderByDesc('total_views')->orderByDesc('updated_at'),
+            'rating' => $query->orderByDesc('average_rating')->orderByDesc('ratings_count')->orderByDesc('updated_at'),
+            'completed' => $query->where('status', 'completed')->latest('updated_at'),
+            default => $query->latest('updated_at'),
+        };
+
+        if ($status !== '') {
+            $query->whereIn('status', explode(',', $status));
+        }
+
+        $mangas = $query->paginate(40)->withQueryString();
+
+        $sortLabels = [
+            'new' => 'Mới cập nhật',
+            'old' => 'Cũ nhất',
+            'views' => 'Đọc nhiều',
+            'rating' => 'Đánh giá cao',
+            'completed' => 'Đã hoàn thành',
+        ];
+
+        $preserveQuery = $request->except(['sort', 'page']);
+        $sortOptions = [];
+        foreach ($sortLabels as $key => $label) {
+            $q = array_merge($preserveQuery, ['page' => 1]);
+            if ($key === 'new') {
+                unset($q['sort']);
+            } else {
+                $q['sort'] = $key;
+            }
+            $sortOptions[] = [
+                'key' => $key,
+                'label' => $label,
+                'url' => route('danh-sach').'?'.http_build_query($q),
+            ];
+        }
+
+        return view($this->prefixTheme.'::danh-sach', [
+            'mangas' => $mangas,
+            'genres' => $genres,
+            'sort' => $sort,
+            'sortOptions' => $sortOptions,
+            'currentSortLabel' => $sortLabels[$sort] ?? $sortLabels['new'],
+        ]);
+    }
+
+    public function showGioiThieu()
+    {
+        SEOMeta::setTitle('Giới thiệu | ' . env('APP_NAME'), false)
+            ->setDescription(active_theme_config('seo_home_description', ''))
+            ->setCanonical(route('gioi-thieu'));
+
+        return view($this->prefixTheme.'::gioi-thieu');
+    }
+
+    public function showGenres()
+    {
+        SEOMeta::setTitle('Tất cả thể loại truyện | ' . env('APP_NAME'), false)
+            ->setDescription(active_theme_config('seo_home_description', ''))
+            ->setCanonical(route('genres'));
+
+        $genres = Genre::query()
+            ->orderBy('name')
+            ->get();
+
+        return view($this->prefixTheme.'::genres', compact('genres'));
+    }
 }
