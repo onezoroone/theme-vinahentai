@@ -1,0 +1,28 @@
+@extends('theme-vinahentai::layout.main')
+
+@section('body')
+    <div class="min-h-screen w-full px-4">
+        <div class="mx-auto mb-10 flex w-full max-w-[402px] flex-col items-center gap-[46px] pt-[104px] md:max-w-[558px] md:gap-6 md:pt-[104px]">
+            <img src="{{ asset('vendor/theme-vinahentai/images/logo.webp') }}" alt="Logo Vinahentai" class="h-[75px] w-[340px]">
+            <div class="border-bd-default bg-bgc-layer1 flex w-full flex-col items-center gap-6 overflow-y-auto rounded-xl border p-4 md:max-h-[450px]">
+                <div class="flex w-full flex-col gap-[11px]"><h1 class="sr-only">Đăng nhập tài khoản Vinahentai để trải nghiệm đầy đủ</h1><div class="from-txt-secondary h-[1px] w-full bg-gradient-to-r to-transparent md:w-[370px]"></div></div>
+
+                <form action="{{ route('login.post') }}" class="flex w-full flex-col gap-4" data-discover="true" method="post">
+                    @csrf
+                    @if ($errors->any())
+                        <div class="rounded bg-red-500/10 p-2 text-sm font-medium text-red-500">{{ $errors->first('email') }}</div>
+                    @endif
+                    <div class="flex w-full flex-col"><div class="flex items-center gap-[10px] pb-3"><label for="email" class="text-txt-primary text-xs leading-4 font-semibold">Email/Username</label></div><div class="bg-bgc-layer2 border-bd-default flex w-full items-center rounded-xl border px-3 py-[10px]"><input type="text" id="email" placeholder="Nhập email hoặc username của bạn" class="text-txt-secondary w-full bg-transparent text-base leading-6 font-medium outline-none" required="" name="email" value="{{ old('email') }}"></div></div>
+                    <div class="flex w-full flex-col"><div class="flex items-center gap-[10px] pb-3"><label for="password" class="text-txt-primary text-xs leading-4 font-semibold">Mật khẩu</label></div><div class="bg-bgc-layer2 border-bd-default flex w-full items-center rounded-xl border px-3 py-[10px]"><input type="password" id="password" placeholder="Nhập mật khẩu của bạn" class="text-txt-secondary w-full bg-transparent text-base leading-6 font-medium outline-none" required="" name="password" value=""></div></div>
+                    <div class="flex items-center justify-start gap-2"><span class="text-txt-secondary text-sm leading-5 font-medium">Chưa có tài khoản?</span><a class="text-txt-focus text-sm leading-5 font-medium" href="{{ route('register') }}" data-discover="true">Đăng ký ngay</a></div>
+
+                    <button type="submit" class="to-lav-500 h-11 w-full rounded-xl bg-gradient-to-b from-[#DD94FF] px-4 py-3 text-sm leading-5 font-semibold text-black shadow-[0px_4px_8.9px_rgba(196,69,255,0.25)] disabled:opacity-70">Đăng nhập</button>
+
+                    <a class="flex h-11 w-full items-center justify-center gap-2 rounded-xl border border-[#5865F2] bg-[#5865F2] px-4 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90" href="{{ route('auth.discord.redirect') }}" data-discover="true"><svg width="20" height="16" viewBox="0 0 71 55" fill="currentColor"><path d="M60.1 4.9A58.5 58.5 0 0045.4.2a.2.2 0 00-.2.1 40.8 40.8 0 00-1.8 3.7 54 54 0 00-16.2 0A37.3 37.3 0 0025.4.3a.2.2 0 00-.2-.1 58.4 58.4 0 00-14.7 4.6.2.2 0 00-.1.1C1.5 18.7-.9 32 .3 45.2v.1a58.7 58.7 0 0017.9 9.1.2.2 0 00.3-.1 42 42 0 003.6-5.9.2.2 0 00-.1-.3 38.7 38.7 0 01-5.5-2.7.2.2 0 01 0-.4l1.1-.9a.2.2 0 01.2 0 41.9 41.9 0 0035.6 0 .2.2 0 01.3 0l1 .9a.2.2 0 010 .3 36.4 36.4 0 01-5.5 2.7.2.2 0 00-.1.3 47 47 0 003.6 5.9.2.2 0 00.2.1A58.5 58.5 0 0070.5 45.3v-.1c1.4-15-2.3-28-9.8-39.6a.2.2 0 00-.1-.1zM23.7 37c-3.4 0-6.2-3.2-6.2-7s2.7-7 6.2-7 6.3 3.1 6.2 7-2.8 7-6.2 7zm23 0c-3.4 0-6.2-3.2-6.2-7s2.7-7 6.2-7 6.3 3.1 6.2 7-2.8 7-6.2 7z"></path></svg>Tiếp tục với Discord</a>
+
+                    <a class="flex h-11 w-full items-center justify-center gap-2 rounded-xl border border-gray-600 bg-white px-4 py-3 text-sm font-semibold text-gray-800 transition-opacity hover:opacity-90" href="{{ route('auth.google.redirect') }}" data-discover="true"><svg width="18" height="18" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.7 5.5 2.7 13.5l7.9 6.2C12.7 13.1 17.9 9.5 24 9.5z"></path><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h12.7c-.5 2.8-2.2 5.2-4.6 6.8l7.1 5.5c4.1-3.8 6.3-9.4 6.3-16.3z"></path><path fill="#34A853" d="M10.6 28.3a14.6 14.6 0 010-9.1l-7.9-6.1a24 24 0 000 21.4l7.9-6.2z"></path><path fill="#FBBC05" d="M24 48c6.5 0 11.9-2.2 15.9-5.9l-7.1-5.5c-2.2 1.5-5 2.4-8.8 2.4-6.1 0-11.3-3.6-13.4-8.7l-7.9 6.2C6.7 42.5 14.6 48 24 48z"></path></svg>Tiếp tục với Google</a>
+                </form>
+            </div>
+        </div>
+    </div>
+@endsection

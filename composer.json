@@ -1,7 +1,7 @@
 {
-  "name": "nqt/theme-sample",
-  "version": "1.0.0",
-  "description": "Theme mẫu cho hệ thống theme động.",
+  "name": "nqt/theme-vinahentai",
+  "version": "1.0.1",
+  "description": "Theme giao diện VinaHentai (Blade, asset, route) cho ứng dụng Laravel.",
   "type": "library",
   "license": "MIT",
   "require": {
@@ -10,13 +10,13 @@
   },
   "autoload": {
     "psr-4": {
-      "Nqt\\ThemeSample\\": "src/"
+      "Nqt\\ThemeVinahentai\\": "src/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Nqt\\ThemeSample\\ThemeSampleServiceProvider"
+        "Nqt\\ThemeVinahentai\\ThemeVinahentaiServiceProvider"
       ]
     }
   },

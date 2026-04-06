@@ -1,0 +1,12 @@
+{
+    "name": "nqt-theme-vinahentai-assets",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build:js": "esbuild resources/assets/js/main.entry.js --bundle --format=iife --platform=browser --outfile=resources/assets/js/main.js --minify"
+    },
+    "devDependencies": {
+        "@floating-ui/dom": "^1.7.6",
+        "esbuild": "^0.25.0"
+    }
+}

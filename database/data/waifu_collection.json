@@ -1,0 +1,539 @@
+{
+  "waifuCollection": {
+    "totalOwned": 85,
+    "tiers": {
+      "tier5": {
+        "stars": 5,
+        "count": 2,
+        "waifus": [
+          {
+            "waifuId": "68bef5a7b673084e2cc4f3e0",
+            "name": "Iomaya",
+            "image": "https://cdn.vinahentai.icu/waifu-images/iomaya_vinahentai-1757345189801-41911850.webp",
+            "stars": 5,
+            "expBuff": 50,
+            "goldBuff": 50
+          },
+          {
+            "waifuId": "690eac70a2caabd36f3afd8e",
+            "name": "Rem (Re:Zero)",
+            "image": "https://cdn.vinahentai.icu/waifu-images/Rem_vinahentai-vinahentai.com-1762569326734-548b8aa3.webp",
+            "stars": 5,
+            "expBuff": null,
+            "goldBuff": null
+          }
+        ]
+      },
+      "tier4": {
+        "stars": 4,
+        "count": 15,
+        "waifus": [
+          {
+            "waifuId": "68b3333b62756025a5dc1b63",
+            "name": "Mio Naruse",
+            "image": "https://cdn.vinahentai.icu/waifu-images/Mio naruse vinahentai-1756574521713-570683b4.webp",
+            "stars": 4
+          },
+          {
+            "waifuId": "68b3340562756025a5dc1b7a",
+            "name": "Shenhe",
+            "image": "https://cdn.vinahentai.icu/waifu-images/ezgif.com-webp-maker (22)-1756574723993-ebf13faa.webp",
+            "stars": 4
+          },
+          {
+            "waifuId": "68b336cb62756025a5dc1b9d",
+            "name": "Heinrich On Stage",
+            "image": "https://cdn.vinahentai.icu/waifu-images/ezgif.com-webp-maker (24)-1756575433128-0fca51a4.webp",
+            "stars": 4
+          },
+          {
+            "waifuId": "68b337bd62756025a5dc1ba7",
+            "name": "Lady Dimitrescu",
+            "image": "https://cdn.vinahentai.icu/waifu-images/dimitrescu vinahentai-1756575675083-2cada7a1.webp",
+            "stars": 4
+          },
+          {
+            "waifuId": "68b3383c62756025a5dc1bb2",
+            "name": "Saeko",
+            "image": "https://cdn.vinahentai.icu/waifu-images/saeko vinahentai-1756575802999-8710dff1.webp",
+            "stars": 4
+          },
+          {
+            "waifuId": "68b338b962756025a5dc1bbc",
+            "name": "Gorgon",
+            "image": "https://cdn.vinahentai.icu/waifu-images/Gorgon vinahentai-1756575926514-03a44594.webp",
+            "stars": 4
+          },
+          {
+            "waifuId": "68b3393562756025a5dc1bc5",
+            "name": "Yasaka",
+            "image": "https://cdn.vinahentai.icu/waifu-images/Yasaka vinahentai-1756576051503-fd093938.webp",
+            "stars": 4
+          },
+          {
+            "waifuId": "68b33a2462756025a5dc1bd8",
+            "name": "Artoria",
+            "image": "https://cdn.vinahentai.icu/waifu-images/Artoria vinahentai-1756576291116-e5609d74.webp",
+            "stars": 4
+          },
+          {
+            "waifuId": "68b33adb62756025a5dc1be2",
+            "name": "Hasumi",
+            "image": "https://cdn.vinahentai.icu/waifu-images/Hasumi vinahentai-1756576474122-09d1f857.webp",
+            "stars": 4
+          },
+          {
+            "waifuId": "68b33b4a62756025a5dc1beb",
+            "name": "Fortuna",
+            "image": "https://cdn.vinahentai.icu/waifu-images/Fortuna vinahentai-1756576585043-dcb4d9bb.webp",
+            "stars": 4
+          },
+          {
+            "waifuId": "68b33bb362756025a5dc1bf4",
+            "name": "Chisato",
+            "image": "https://cdn.vinahentai.icu/waifu-images/Chisato vinahentai-1756576689695-18979146.webp",
+            "stars": 4
+          },
+          {
+            "waifuId": "68b33c4562756025a5dc1bfd",
+            "name": "Mi-jung",
+            "image": "https://cdn.vinahentai.icu/waifu-images/Mijung vinahentai-1756576835252-d65a0c7e.webp",
+            "stars": 4
+          },
+          {
+            "waifuId": "68b33cca62756025a5dc1c11",
+            "name": "Nyotengu",
+            "image": "https://cdn.vinahentai.icu/waifu-images/ezgif.com-webp-maker (25)-1756576968699-8abfdd3d.webp",
+            "stars": 4
+          },
+          {
+            "waifuId": "68b33d7262756025a5dc1c1c",
+            "name": "Sword Maiden",
+            "image": "https://cdn.vinahentai.icu/waifu-images/sw md vinahentai-1756577136505-2d1b82c4.webp",
+            "stars": 4
+          },
+          {
+            "waifuId": "68b33de162756025a5dc1c2e",
+            "name": "Corrin x Nowi",
+            "image": "https://cdn.vinahentai.icu/waifu-images/ezgif.com-webp-maker (26)-1756577247485-8cb12267.webp",
+            "stars": 4
+          }
+        ]
+      },
+      "tier3": {
+        "stars": 3,
+        "count": 68,
+        "waifus": [
+          {
+            "waifuId": "68b3258662756025a5dc18ba",
+            "name": "Aerith Wedding Dress",
+            "image": "https://cdn.vinahentai.icu/waifu-images/Aerith wedding vinahentai-1756571012925-e4214ce6.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b325a462756025a5dc18cc",
+            "name": "Alexandrina",
+            "image": "https://cdn.vinahentai.icu/waifu-images/alexandrina vinahentai-1756571043193-d60248fd.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b325c262756025a5dc18d4",
+            "name": "Android 18",
+            "image": "https://cdn.vinahentai.icu/waifu-images/android 18 vinahentai-1756571073066-fa8cabc4.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b3261a62756025a5dc18de",
+            "name": "Ashley",
+            "image": "https://cdn.vinahentai.icu/waifu-images/Ashley vinahentai-1756571160350-506b8bc5.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b3263a62756025a5dc18e6",
+            "name": "Astrayao",
+            "image": "https://cdn.vinahentai.icu/waifu-images/astrayao vinahentai-1756571192856-0aff2919.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b3267962756025a5dc18f9",
+            "name": "Asuna Bunny",
+            "image": "https://cdn.vinahentai.icu/waifu-images/asuna bunny vinahentai-1756571255962-0bae2c23.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b3269362756025a5dc1901",
+            "name": "Boa Hancock",
+            "image": "https://cdn.vinahentai.icu/waifu-images/boa hancock vinahentai-1756571281306-cb4bea64.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b326a062756025a5dc1909",
+            "name": "Carrot",
+            "image": "https://cdn.vinahentai.icu/waifu-images/carrot vinahentai-1756571295280-a60c45fc.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b326b162756025a5dc1911",
+            "name": "Changli",
+            "image": "https://cdn.vinahentai.icu/waifu-images/changli vinahentai-1756571311411-2c6253c2.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b326c162756025a5dc191a",
+            "name": "Clorinde",
+            "image": "https://cdn.vinahentai.icu/waifu-images/clorinde vinahentai-1756571328285-cd226949.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b326d062756025a5dc1922",
+            "name": "D.VA",
+            "image": "https://cdn.vinahentai.icu/waifu-images/dva vinahentai-1756571343643-b0b3347c.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b326e162756025a5dc192a",
+            "name": "Faye Valentine",
+            "image": "https://cdn.vinahentai.icu/waifu-images/fay valentine vinahentai-1756571360594-df7b9690.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b326f362756025a5dc1932",
+            "name": "Feixiao",
+            "image": "https://cdn.vinahentai.icu/waifu-images/feixiao vinahentai-1756571377883-128db326.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b3270062756025a5dc193b",
+            "name": "Fern",
+            "image": "https://cdn.vinahentai.icu/waifu-images/fern vinahentai-1756571391489-e295dd40.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b3271162756025a5dc1943",
+            "name": "Firefly Swimsuit",
+            "image": "https://cdn.vinahentai.icu/waifu-images/firefly swimsuit vinahentai-1756571407317-877fe49d.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b3271e62756025a5dc194b",
+            "name": "Firefly",
+            "image": "https://cdn.vinahentai.icu/waifu-images/firefly vinahentai-1756571420740-5bcbe152.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b3272f62756025a5dc1953",
+            "name": "Frieren",
+            "image": "https://cdn.vinahentai.icu/waifu-images/frieren vinahentai-1756571438452-bce3836b.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b3274162756025a5dc195c",
+            "name": "Fubuki",
+            "image": "https://cdn.vinahentai.icu/waifu-images/fubuki vinahentai-1756571456145-fe13e4fd.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b3274e62756025a5dc1964",
+            "name": "Ganyu",
+            "image": "https://cdn.vinahentai.icu/waifu-images/ganyu vinahentai-1756571467881-370ef8c2.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b3275d62756025a5dc196c",
+            "name": "Gwen",
+            "image": "https://cdn.vinahentai.icu/waifu-images/gwen vinahentai-1756571483717-8c0074f3.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b3276862756025a5dc1974",
+            "name": "Ino",
+            "image": "https://cdn.vinahentai.icu/waifu-images/ino vinahentai-1756571495382-f9266ae5.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b3277662756025a5dc197c",
+            "name": "Jade",
+            "image": "https://cdn.vinahentai.icu/waifu-images/jade vinahentai-1756571509138-d515f072.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b327b362756025a5dc1986",
+            "name": "Jean",
+            "image": "https://cdn.vinahentai.icu/waifu-images/jean vinahentai-1756571569515-9b990580.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b327cc62756025a5dc198e",
+            "name": "Kafka",
+            "image": "https://cdn.vinahentai.icu/waifu-images/kafka nor vinahentai-1756571595229-980d990f.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b327de62756025a5dc1996",
+            "name": "Kafka Swimsuit",
+            "image": "https://cdn.vinahentai.icu/waifu-images/kafka vinahentai-1756571613018-39ebabe4.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b327ee62756025a5dc199e",
+            "name": "Killjoy",
+            "image": "https://cdn.vinahentai.icu/waifu-images/killjoy vinahentai-1756571629047-49353dce.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b3280162756025a5dc19a7",
+            "name": "Kiriko",
+            "image": "https://cdn.vinahentai.icu/waifu-images/kiriko vinahentai-1756571647742-3652faf8.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b3286e62756025a5dc19b5",
+            "name": "Lucyna",
+            "image": "https://cdn.vinahentai.icu/waifu-images/Lucyna vinahentai-1756571756341-f90292d0.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b328b962756025a5dc19be",
+            "name": "Mai Senpai",
+            "image": "https://cdn.vinahentai.icu/waifu-images/mai vinahentai-1756571832253-3f913232.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b328d062756025a5dc19c6",
+            "name": "Makima Bunnysuit",
+            "image": "https://cdn.vinahentai.icu/waifu-images/makima bunnysuit vinahentai-1756571855047-cc0a4c93.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b328e262756025a5dc19ce",
+            "name": "Marin",
+            "image": "https://cdn.vinahentai.icu/waifu-images/marin vinahentai-1756571872901-3a279478.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b328fb62756025a5dc19d7",
+            "name": "Mercy-Christmas",
+            "image": "https://cdn.vinahentai.icu/waifu-images/mercy christ vinahentai-1756571898159-c36bb7a0.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b3290e62756025a5dc19df",
+            "name": "Mercy-Nurse",
+            "image": "https://cdn.vinahentai.icu/waifu-images/mercy vinahentai-1756571917052-7b19632d.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b3291d62756025a5dc19e7",
+            "name": "Mikasa",
+            "image": "https://cdn.vinahentai.icu/waifu-images/mikasa vinahentai-1756571931423-39ed320e.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b3293462756025a5dc19ef",
+            "name": "Misato Katsuragi",
+            "image": "https://cdn.vinahentai.icu/waifu-images/misato katsuragi vinahentai-1756571954899-0e423927.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b3294362756025a5dc19f8",
+            "name": "Mitsuri",
+            "image": "https://cdn.vinahentai.icu/waifu-images/mitsuri vinahentai-1756571970280-47bb08f5.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b3298762756025a5dc1a01",
+            "name": "Mona",
+            "image": "https://cdn.vinahentai.icu/waifu-images/mona vinahentai-1756572037518-38be1839.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b329cd62756025a5dc1a0a",
+            "name": "Morrigan",
+            "image": "https://cdn.vinahentai.icu/waifu-images/morrigan vinahentai-1756572107836-aff4c82a.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b329dd62756025a5dc1a12",
+            "name": "Nami",
+            "image": "https://cdn.vinahentai.icu/waifu-images/nami vinahentai-1756572124032-6ec74455.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b329ef62756025a5dc1a1a",
+            "name": "Nicole",
+            "image": "https://cdn.vinahentai.icu/waifu-images/nicole demara-1756572141451-f02be40e.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b32c6262756025a5dc1a2d",
+            "name": "Ningguang",
+            "image": "https://cdn.vinahentai.icu/waifu-images/ningguang-1756572768265-bd2765ab.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b32d1762756025a5dc1a3b",
+            "name": "Palutena",
+            "image": "https://cdn.vinahentai.icu/waifu-images/palutena vinahentai-1756572949807-1ff979a1.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b32d5b62756025a5dc1a45",
+            "name": "Power",
+            "image": "https://cdn.vinahentai.icu/waifu-images/power vinahentai-1756573017211-af644b5d.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b32d7662756025a5dc1a4d",
+            "name": "Raiden Office Wear",
+            "image": "https://cdn.vinahentai.icu/waifu-images/raiden office lady vinahentai-1756573045506-190ebc3a.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b32d8862756025a5dc1a55",
+            "name": "Raiden Shogun",
+            "image": "https://cdn.vinahentai.icu/waifu-images/raiden vinahentai-1756573063039-2d5c5df9.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b32dae62756025a5dc1a5d",
+            "name": "Raiden Shogun X Yae Miko",
+            "image": "https://cdn.vinahentai.icu/waifu-images/raiden x yae vinahentai-1756573100215-fa1c7d90.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b32dc062756025a5dc1a66",
+            "name": "Reze",
+            "image": "https://cdn.vinahentai.icu/waifu-images/reze vinahentai-1756573118715-1bdb0d6b.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b32dd062756025a5dc1a6e",
+            "name": "Robin",
+            "image": "https://cdn.vinahentai.icu/waifu-images/robin nor vinahentai-1756573135441-0c64c8ec.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b32e0062756025a5dc1a76",
+            "name": "Nico Robin",
+            "image": "https://cdn.vinahentai.icu/waifu-images/robin vinahentai-1756573181949-918aaa72.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b32e1462756025a5dc1a7f",
+            "name": "Ruan Mei",
+            "image": "https://cdn.vinahentai.icu/waifu-images/ruan mei vinahentai-1756573203619-c4a83428.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b32e2562756025a5dc1a87",
+            "name": "Sage",
+            "image": "https://cdn.vinahentai.icu/waifu-images/sage vinahentai-1756573219436-e6ecdfbe.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b32e3662756025a5dc1a8f",
+            "name": "Sakura",
+            "image": "https://cdn.vinahentai.icu/waifu-images/sakura vinahentai-1756573237464-2ba868b4.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b32e4762756025a5dc1a97",
+            "name": "Sam Samsung",
+            "image": "https://cdn.vinahentai.icu/waifu-images/sam vinahentai-1756573253904-079f190b.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b32e5a62756025a5dc1aa0",
+            "name": "Shadowheart",
+            "image": "https://cdn.vinahentai.icu/waifu-images/shadowheart vinahentai-1756573272980-a76155a7.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b32e6c62756025a5dc1aa8",
+            "name": "Shenhe (alt)",
+            "image": "https://cdn.vinahentai.icu/waifu-images/shenhe vinahentai-1756573291643-f1a6200a.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b32e8062756025a5dc1ab0",
+            "name": "Spider Gwen",
+            "image": "https://cdn.vinahentai.icu/waifu-images/spider owen vinahentai-1756573311417-bc115aa8.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b32e9262756025a5dc1ab9",
+            "name": "Tifa Bunny",
+            "image": "https://cdn.vinahentai.icu/waifu-images/tifa bunny vinahentai-1756573329389-362c614b.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b32ea362756025a5dc1ac1",
+            "name": "Tifa Swim",
+            "image": "https://cdn.vinahentai.icu/waifu-images/tifa vinahentai-1756573346453-f8294c06.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b32eb162756025a5dc1ac9",
+            "name": "Vivi",
+            "image": "https://cdn.vinahentai.icu/waifu-images/vivi vinahentai-1756573359681-d89fc852.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b32eda62756025a5dc1ad2",
+            "name": "Widowmaker",
+            "image": "https://cdn.vinahentai.icu/waifu-images/widowmaker vinahentai-1756573401051-ffa484e4.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b32fb462756025a5dc1ae9",
+            "name": "Xianyun",
+            "image": "https://cdn.vinahentai.icu/waifu-images/xianyun vinahentai 1-1756573619340-35054dc3.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b3301462756025a5dc1af9",
+            "name": "Xilonen",
+            "image": "https://cdn.vinahentai.icu/waifu-images/xilonen vinahentai-1756573714312-e7bc3ab7.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b3302362756025a5dc1b02",
+            "name": "Yanagi",
+            "image": "https://cdn.vinahentai.icu/waifu-images/yanagi vinahentai-1756573729622-32eca7b4.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b3303a62756025a5dc1b0a",
+            "name": "Yor Swimsuit",
+            "image": "https://cdn.vinahentai.icu/waifu-images/yor swimsuit vinahentai-1756573752459-73d50243.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b3304862756025a5dc1b12",
+            "name": "Yor Briar",
+            "image": "https://cdn.vinahentai.icu/waifu-images/yor vinahentai-1756573766734-e77ff6fb.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b330eb62756025a5dc1b1b",
+            "name": "Yumeko",
+            "image": "https://cdn.vinahentai.icu/waifu-images/Yumeko vinahentai (2)-1756573929410-0a3c7348.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b3310162756025a5dc1b24",
+            "name": "Yuzuriha",
+            "image": "https://cdn.vinahentai.icu/waifu-images/yuzuriha vinahentai-1756573951894-ef15e63c.webp",
+            "stars": 3
+          },
+          {
+            "waifuId": "68b3322b62756025a5dc1b49",
+            "name": "Blackswan",
+            "image": "https://cdn.vinahentai.icu/waifu-images/blackswan vinahentai-1756574249791-ec94b380.webp",
+            "stars": 3
+          }
+        ]
+      }
+    }
+  }
+}

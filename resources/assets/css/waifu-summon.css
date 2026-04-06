@@ -1,0 +1,469 @@
+/**
+ * Thẻ triệu hồi: kích thước + perspective.
+ * Các utility Tailwind tương ứng không có trong app.css đã build (Blade package không nằm trong content scan Tailwind).
+ */
+/* Không dùng overflow:hidden trên cùng node với perspective — Chrome/Safari hay flatten 3D,
+   lật chỉ “quay” mà vẫn thấy mặt úp / không đổi ảnh. Bo góc do các lớp con (absolute + rounded-lg). */
+[data-waifu-summon-card-root] {
+    position: relative;
+    aspect-ratio: 2 / 3;
+    height: auto;
+    width: min(38vw, 168px);
+    max-width: min(100%, 168px);
+    perspective: 800px;
+}
+
+@media (min-width: 640px) {
+    [data-waifu-summon-card-root] {
+        width: 12rem;
+        max-width: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    [data-waifu-summon-card-root] {
+        width: 300px;
+    }
+}
+
+/*
+ * Lớp triệu hồi có overflow-y-auto / isolation → 3D bị flatten, backface-visibility vô hiệu:
+ * mặt úp (DOM trước) vẫn đè mặt thưởng dù src đã đổi.
+ * Fallback: opacity + z-index — chưa lật chỉ thấy lá bài; sau data-flipped hiện ảnh thưởng.
+ */
+[data-waifu-summon-card-inner] {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+[data-waifu-summon-card-inner] > div:nth-child(1) {
+    z-index: 2;
+    opacity: 1;
+    transition: opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-waifu-summon-card-inner] > div:nth-child(2) {
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+[data-waifu-summon-card-inner][data-flipped="true"] > div:nth-child(1) {
+    z-index: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+[data-waifu-summon-card-inner][data-flipped="true"] > div:nth-child(2) {
+    z-index: 3;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Công tắc « Bỏ qua video » — style thuần (không dùng arbitrary Tailwind). */
+.waifu-summon-skip-track {
+    position: relative;
+    display: inline-flex;
+    height: 1rem;
+    width: 1.75rem;
+    align-items: center;
+    border-radius: 9999px;
+    background-color: rgb(255 255 255 / 0.3);
+    transition: background-color 0.2s ease;
+}
+
+[data-waifu-summon-skip-video-toggle][aria-pressed="true"] .waifu-summon-skip-track {
+    background-color: #dd94ff;
+}
+
+.waifu-summon-skip-knob {
+    display: inline-block;
+    height: 0.75rem;
+    width: 0.75rem;
+    border-radius: 9999px;
+    background-color: #fff;
+    transition: transform 0.2s ease;
+    transform: translateX(0.25rem);
+}
+
+[data-waifu-summon-skip-video-toggle][aria-pressed="true"] .waifu-summon-skip-knob {
+    transform: translateX(0.875rem);
+}
+
+/* --- Hiệu ứng chúc mừng Waifu 5★ (lớp [data-waifu-summon-5star-celebration]) --- */
+[data-waifu-summon-card-root].waifu-summon-card-root--5star-glow {
+    filter: drop-shadow(0 0 18px rgba(255, 215, 0, 1)) drop-shadow(0 0 36px rgba(255, 105, 180, 0.65))
+        drop-shadow(0 0 52px rgba(221, 147, 255, 0.55));
+    animation: waifu-5star-card-pulse 0.85s ease-in-out infinite;
+}
+
+@keyframes waifu-5star-card-pulse {
+    0%,
+    100% {
+        filter: drop-shadow(0 0 14px rgba(255, 215, 0, 0.85)) drop-shadow(0 0 32px rgba(255, 182, 193, 0.5))
+            drop-shadow(0 0 48px rgba(186, 104, 255, 0.4));
+        transform: scale(1);
+    }
+
+    50% {
+        filter: drop-shadow(0 0 28px rgba(255, 237, 100, 1)) drop-shadow(0 0 48px rgba(255, 105, 180, 0.85))
+            drop-shadow(0 0 72px rgba(221, 147, 255, 0.75));
+        transform: scale(1.02);
+    }
+}
+
+/* Rung nhẹ toàn màn lật thẻ khi mở chúc mừng (JS gắn class). */
+[data-waifu-summon-card-layer].waifu-5star-layer-shake {
+    animation: waifu-5star-screen-shake 0.38s ease-in-out 4;
+}
+
+@keyframes waifu-5star-screen-shake {
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    20% {
+        transform: translate(3px, -2px);
+    }
+
+    40% {
+        transform: translate(-3px, 2px);
+    }
+
+    60% {
+        transform: translate(2px, 2px);
+    }
+
+    80% {
+        transform: translate(-2px, -1px);
+    }
+}
+
+/* Tia vàng / tím xoay phía sau confetti */
+.waifu-5star-celebration__rays {
+    background: repeating-conic-gradient(
+        from 0deg at 50% 42%,
+        transparent 0deg 5deg,
+        rgba(255, 215, 0, 0.14) 5deg 9deg,
+        transparent 9deg 14deg,
+        rgba(255, 105, 180, 0.1) 14deg 17deg,
+        transparent 17deg 22deg
+    );
+    opacity: 0.9;
+    transform-origin: 50% 42%;
+}
+
+.waifu-5star-celebration--active .waifu-5star-celebration__rays {
+    animation: waifu-5star-rays-spin 10s linear infinite;
+}
+
+@keyframes waifu-5star-rays-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Chớp sáng mở màn */
+.waifu-5star-celebration__flash {
+    opacity: 0;
+    background: radial-gradient(
+        ellipse 90% 70% at 50% 38%,
+        rgba(255, 255, 255, 0.95) 0%,
+        rgba(255, 230, 120, 0.55) 28%,
+        rgba(255, 182, 255, 0.2) 48%,
+        transparent 72%
+    );
+}
+
+.waifu-5star-celebration--active .waifu-5star-celebration__flash {
+    animation: waifu-5star-open-flash 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes waifu-5star-open-flash {
+    0% {
+        opacity: 0.95;
+    }
+
+    22% {
+        opacity: 0.65;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Vòng quay gradient quanh khối chữ */
+.waifu-5star-celebration__panel-wrap {
+    position: relative;
+    padding: 18px;
+    z-index: 10;
+}
+
+.waifu-5star-celebration__panel-wrap .waifu-5star-celebration__panel {
+    position: relative;
+    z-index: 2;
+}
+
+.waifu-5star-celebration__orbit {
+    position: absolute;
+    z-index: 0;
+    border-radius: 9999px;
+    pointer-events: none;
+    inset: 0;
+    margin: auto;
+    aspect-ratio: 1;
+    width: min(104%, 420px);
+    max-width: calc(100vw - 2rem);
+    background: conic-gradient(from 0deg, #ffd700, #ff69b4, #c084fc, #67e8f9, #ffd700);
+    opacity: 0.55;
+    filter: blur(1px);
+    -webkit-mask: radial-gradient(transparent 68%, #000 69%, #000 100%);
+    mask: radial-gradient(transparent 68%, #000 69%, #000 100%);
+}
+
+.waifu-5star-celebration__orbit--b {
+    width: min(118%, 480px);
+    max-width: calc(100vw - 1rem);
+    opacity: 0.35;
+    -webkit-mask: radial-gradient(transparent 72%, #000 73%, #000 100%);
+    mask: radial-gradient(transparent 72%, #000 73%, #000 100%);
+}
+
+.waifu-5star-celebration--active .waifu-5star-celebration__orbit--a {
+    animation: waifu-5star-orbit-spin 4.5s linear infinite;
+}
+
+.waifu-5star-celebration--active .waifu-5star-celebration__orbit--b {
+    animation: waifu-5star-orbit-spin 5.5s linear infinite reverse;
+}
+
+@keyframes waifu-5star-orbit-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.waifu-5star-celebration__title {
+    background-image: linear-gradient(
+        118deg,
+        #fff 0%,
+        #fff9c4 12%,
+        #ffec8b 25%,
+        #ffd700 40%,
+        #ffb347 55%,
+        #ffd700 70%,
+        #fff8dc 85%,
+        #fff 100%
+    );
+    background-size: 240% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 0 14px rgba(255, 215, 0, 0.95)) drop-shadow(0 6px 28px rgba(255, 20, 147, 0.35));
+}
+
+.waifu-5star-celebration__subtitle {
+    text-shadow:
+        0 0 20px rgba(255, 215, 0, 0.55),
+        0 0 40px rgba(192, 132, 252, 0.45),
+        0 2px 4px rgba(0, 0, 0, 0.85);
+}
+
+.waifu-5star-celebration--active .waifu-5star-celebration__title {
+    animation: waifu-5star-title-shine 1.8s ease-in-out infinite;
+}
+
+.waifu-5star-celebration__star {
+    display: inline-block;
+    margin: 0 0.04em;
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.9));
+}
+
+.waifu-5star-celebration--active .waifu-5star-celebration__star {
+    animation: waifu-5star-star-jump 0.55s cubic-bezier(0.45, 0.05, 0.55, 1.35) infinite alternate;
+}
+
+.waifu-5star-celebration--active .waifu-5star-celebration__star:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.waifu-5star-celebration--active .waifu-5star-celebration__star:nth-child(2) {
+    animation-delay: 0.08s;
+}
+
+.waifu-5star-celebration--active .waifu-5star-celebration__star:nth-child(3) {
+    animation-delay: 0.16s;
+}
+
+.waifu-5star-celebration--active .waifu-5star-celebration__star:nth-child(4) {
+    animation-delay: 0.24s;
+}
+
+.waifu-5star-celebration--active .waifu-5star-celebration__star:nth-child(5) {
+    animation-delay: 0.32s;
+}
+
+@keyframes waifu-5star-star-jump {
+    from {
+        transform: translateY(0) scale(1) rotate(-6deg);
+    }
+
+    to {
+        transform: translateY(-10px) scale(1.18) rotate(6deg);
+    }
+}
+
+.waifu-5star-celebration--active .waifu-5star-celebration__panel {
+    animation:
+        waifu-5star-pop 0.75s cubic-bezier(0.22, 1.45, 0.32, 1) both,
+        waifu-5star-panel-glow 1.1s ease-in-out infinite alternate 0.75s;
+}
+
+@keyframes waifu-5star-title-shine {
+    0%,
+    100% {
+        background-position: 0% center;
+    }
+
+    50% {
+        background-position: 100% center;
+    }
+}
+
+@keyframes waifu-5star-pop {
+    0% {
+        transform: scale(0.35) rotate(-4deg);
+        opacity: 0;
+    }
+
+    70% {
+        transform: scale(1.06) rotate(1deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes waifu-5star-panel-glow {
+    from {
+        box-shadow:
+            0 0 40px rgba(255, 215, 0, 0.45),
+            0 0 80px rgba(221, 147, 255, 0.28),
+            inset 0 0 30px rgba(255, 255, 255, 0.06);
+    }
+
+    to {
+        box-shadow:
+            0 0 56px rgba(255, 230, 120, 0.65),
+            0 0 100px rgba(255, 105, 180, 0.35),
+            inset 0 0 40px rgba(255, 255, 255, 0.1);
+    }
+}
+
+.waifu-5star-confetti {
+    position: absolute;
+    left: calc(var(--wx) * 1%);
+    top: -12%;
+    width: var(--ww, 10px);
+    height: var(--wh, 14px);
+    border-radius: var(--wbr, 2px);
+    opacity: 0.98;
+    animation: waifu-5star-confetti-fall var(--wdur, 2.8s) ease-in forwards;
+    animation-delay: var(--wdelay, 0s);
+    box-shadow:
+        0 0 8px rgba(255, 255, 255, 0.5),
+        0 0 18px rgba(255, 215, 0, 0.55);
+}
+
+.waifu-5star-confetti--ribbon {
+    border-radius: 1px;
+}
+
+.waifu-5star-confetti--dot {
+    width: var(--ww, 8px);
+    height: var(--wh, 8px);
+    border-radius: 50%;
+}
+
+@keyframes waifu-5star-confetti-fall {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+    }
+
+    100% {
+        transform: translateY(120vh) translateX(var(--wx2, 0px)) rotate(var(--wrot, 540deg)) scale(0.75);
+        opacity: 0.25;
+    }
+}
+
+/* Lấp lánh bay từ giữa */
+.waifu-5star-sparkle {
+    position: absolute;
+    left: calc(50% + var(--sx, 0px));
+    top: calc(42% + var(--sy, 0px));
+    width: var(--sw, 6px);
+    height: var(--sw, 6px);
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.9);
+    animation: waifu-5star-sparkle-burst var(--sdur, 1.1s) ease-out forwards;
+    animation-delay: var(--sdelay, 0s);
+}
+
+@keyframes waifu-5star-sparkle-burst {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(0.2);
+    }
+
+    40% {
+        opacity: 1;
+        transform: translate(var(--svx, 0px), var(--svy, 0px)) scale(1.2);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(calc(var(--svx, 0px) * 1.4), calc(var(--svy, 0px) * 1.4)) scale(0.3);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    [data-waifu-summon-card-root].waifu-summon-card-root--5star-glow {
+        animation: none;
+        transform: none;
+    }
+
+    [data-waifu-summon-card-layer].waifu-5star-layer-shake {
+        animation: none;
+    }
+
+    .waifu-5star-celebration--active .waifu-5star-celebration__rays,
+    .waifu-5star-celebration--active .waifu-5star-celebration__orbit--a,
+    .waifu-5star-celebration__orbit--b {
+        animation: none;
+    }
+
+    .waifu-5star-celebration--active .waifu-5star-celebration__flash {
+        animation: none;
+        opacity: 0;
+    }
+
+    .waifu-5star-celebration--active .waifu-5star-celebration__title,
+    .waifu-5star-celebration--active .waifu-5star-celebration__star,
+    .waifu-5star-celebration--active .waifu-5star-celebration__panel {
+        animation: none;
+    }
+
+    .waifu-5star-confetti,
+    .waifu-5star-sparkle {
+        animation: none;
+        opacity: 0;
+    }
+}
