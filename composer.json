@@ -1,6 +1,6 @@
 {
   "name": "nqt/theme-vinahentai",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Theme giao diện VinaHentai (Blade, asset, route) cho ứng dụng Laravel.",
   "type": "library",
   "license": "MIT",
