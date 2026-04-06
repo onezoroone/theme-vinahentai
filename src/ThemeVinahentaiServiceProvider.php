@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use Nqt\ThemeVinahentai\Console\Commands\GenerateThemeVinahentaiSitemapCommand;
+use Nqt\ThemeVinahentai\Console\Commands\ThemeVinahentaiSeedCommand;
 
 class ThemeVinahentaiServiceProvider extends ServiceProvider
 {
@@ -182,6 +183,7 @@ class ThemeVinahentaiServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->commands([
                 GenerateThemeVinahentaiSitemapCommand::class,
+                ThemeVinahentaiSeedCommand::class,
             ]);
         }
     }
